@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Generate Current PDF",
+            "type": "shell",
+            "command": "./generate.sh $(dirname ${file})",
+            "presentation": {
+                "echo": false,
+                "reveal": "never",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Open CircuiTikZ Designer",
+            "command": "${input:openSimpleBrowser}",
+            "presentation": {
+                "reveal": "never"
+            },
+            "problemMatcher": []
+        },
+    ],
+    "inputs": [
+        {
+            "id": "openSimpleBrowser",
+            "type": "command",
+            "command": "simpleBrowser.show",
+            "args": [
+                "https://circuit2tikz.tf.fau.de/designer/"
+            ]
+        }
+    ]
+}
