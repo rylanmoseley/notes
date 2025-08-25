@@ -51,6 +51,12 @@ jobs:
         run: |
           echo "files=$(find . -maxdepth 1 -name "*.md" -printf "\"${{ matrix.directory }}/%f\"\n" | sort | grep -v "README" | tr '\n' ' ')" >> $GITHUB_OUTPUT
           echo "files=$(find . -maxdepth 1 -name "*.md" -printf "\"${{ matrix.directory }}/%f\"\n" | sort | grep -v "README" | tr '\n' ' ')"
+
+      - name: Copy non-markdown files to working directory
+        run: |
+          shopt -s extglob
+          cp ${{ matrix.directory }}/!(*.md) ./
+          shopt -u extglob
           
       - name: Sanitize artifact name
         id: artifact_name
@@ -60,6 +66,10 @@ jobs:
         run: |
           echo "date: \"Generated on $(date) from commit $(git rev-parse --short HEAD)\"" >> "${{ matrix.directory }}/000-metadata.md"
           echo "---" >> "${{ matrix.directory }}/000-metadata.md"
+
+      - name: Install CircuiTikZ
+        run: |
+          curl -o circuitikz.sty "http://circuitikz.github.io/circuitikz/circuitikzgit.sty"
 
       - name: Build PDF with Pandoc
         uses: docker://pandoc/latex:3.5
