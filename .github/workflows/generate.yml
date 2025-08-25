@@ -95,7 +95,7 @@ jobs:
           <head>
               <meta charset="UTF-8">
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>FRC Software Manuals</title>
+              <title>Rylan Moseley Notes</title>
               <style>
                   body { font-family: sans-serif; line-height: 1.6; padding: 2em; background-color: #f4f4f4; }
                   h1 { color: #333; }
