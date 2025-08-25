@@ -55,7 +55,7 @@ jobs:
       - name: Copy non-markdown files to working directory
         run: |
           shopt -s extglob
-          cp ${{ matrix.directory }}/!(*.md) ./
+          cp ${{ matrix.directory }}/!(*.md) ./ || true
           shopt -u extglob
           
       - name: Sanitize artifact name
