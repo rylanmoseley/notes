@@ -4,3 +4,4 @@ author: Rylan Moseley
 geometry: margin=2cm
 header-includes:
     - \usepackage{circuitikz}
+    - \usepackage{gensymb}
