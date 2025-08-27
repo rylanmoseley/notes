@@ -71,6 +71,10 @@ jobs:
         run: |
           curl -o circuitikz.sty "http://circuitikz.github.io/circuitikz/circuitikzgit.sty"
 
+      - name: Install gensymb
+        run: |
+          curl -o gensymb.sty "https://gitlab.triumf.ca/latex/beamphysicsnote/-/raw/d480069871165c3f52cbe39ef0972fa76a485d2e/gensymb.sty"
+
       - name: Build PDF with Pandoc
         uses: docker://pandoc/latex:3.5
         with:
