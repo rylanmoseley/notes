@@ -1,5 +1,5 @@
 \newpage
-# Meeting 1 Notes
+# Intro
 
 ## Lab needs
 - labs are in groups of 2

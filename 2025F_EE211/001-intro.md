@@ -1,5 +1,5 @@
 \newpage
-# Meeting 1 notes
+# Intro
 - no labs like last time, recitations instead
 - weekly schedule
     - monday: reading
