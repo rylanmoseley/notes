@@ -7,7 +7,7 @@ All final pdfs are built and published by GitHub Actions and are available at [n
 ## Building Locally
 **Requirements**:
 - [`pandoc-cli`](https://archlinux.org/packages/extra/x86_64/pandoc-cli/) (or your favorite pdf-ready pandoc install)
-- [`circuitikz`](https://github.com/circuitikz/circuitikz) (included in `pandoc-cli`)
+- [`circuitikz`](https://github.com/circuitikz/circuitikz) (included in `texlive`)
 - [`texlive`](https://archlinux.org/groups/any/texlive/)
 - [`zathura`](https://archlinux.org/packages/extra/x86_64/zathura/) (needed for the local generation script)
 
